@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/f8b8bea0a5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <a class="back" href="/"><i class="fa-solid fa-arrow-left"></i></a>
+        <svg viewBox="0 0 233 166" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.5 29.5L65 95.5L34.5 67L0 0L104 18L109 105L117 125L123 105L129 18L232.5 0L202.5 66L168 95.5L187.5 29.5L162 35.5L150.5 105L116 165.5L84 105L72 35.5L46.5 29.5Z" fill="#032737"/>
+        </svg>
+
+        <div class="method email">
+            <h2>Email qoldirish</h2>
+            <div class="email">
+                <div class="credentials">
+                    <input type="text" placeholder="To'liq ism">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="textarea-wrapper">
+                    <div class="send"><i class="fa-solid fa-envelope"></i></div>
+                    <textarea placeholder="Habar"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="method socials">
+            <h2>Ijtimoiy sahifalarimiz</h2>
+            {% if socials.telegram %}<a class="social" href="{{socials.telegram}}"><i class="fa-brands fa-telegram"></i>Telegram</a>{% endif %}
+            {% if socials.instagram %}<a class="social" href="{{socials.instagram}}"><i class="fa-brands fa-instagram"></i>Instagram</a>{% endif %}
+            {% if socials.facebook %}<a class="social" href="{{socials.facebook}}"><i class="fa-brands fa-facebook"></i>Facebook</a>{% endif %}
+        </div>
+        <div class="method phone">
+            <h2>Telefon</h2>
+            <a href="tel:{{phone}}">+{{phone}}</a>
+        </div>
+    </div>
+</body>
+</html>

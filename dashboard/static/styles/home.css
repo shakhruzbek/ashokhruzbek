@@ -1,0 +1,111 @@
+header {
+    height: 4rem;
+    width: 100%;
+    background-color: skyblue;
+
+    position: fixed;
+    top: 0;
+    background-color: var(--primary);
+}
+
+main {
+    position: fixed;
+    width: 100%;
+    /* height: calc(100vh - 4rem); */
+    height: 100vh;
+    padding: 4rem;
+    z-index: -1;
+}
+
+main .content {
+    height: 100%;
+    max-width: 65%;
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    
+    font-size: 4em;
+}
+main .content p {
+    font-size: .5em;
+    font-weight: 100;
+    opacity: .7;
+}
+
+main #particles {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+main svg {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    z-index: -2;
+    height: calc(100% - 6rem);
+}
+
+
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    background-color: var(--primary);
+    z-index: 100;
+    padding: 2rem;
+    transition: transform 150ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper .next {
+    position: absolute;
+    padding: 15px 10px;
+    background-color: var(--primary);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    font-size: 1.5em;
+    border-bottom: none;
+    transition: padding 150ms;
+}
+.wrapper .next:hover {
+    padding-bottom: 3rem;
+}
+
+.wrapper h1 {
+    font-size: 6em;
+    text-wrap: nowrap;
+    text-align: center;
+    opacity: .4;
+}
+.wrapper .links {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.wrapper .links .link {
+    width: 100%;
+    min-width: 18rem;
+    padding: 1rem 2rem;
+    
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--background);
+    cursor: pointer;
+    transition: 150ms;
+}
+.wrapper .links .nonfullscreen-link:hover {
+    border: 1px solid gold;
+    scale: 1.2;
+}

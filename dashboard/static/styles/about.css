@@ -1,0 +1,46 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+    padding: 4rem;
+
+    overflow-y: auto;
+}
+.wrapper h1 {
+    font-size: 6em;
+}
+.wrapper p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+.wrapper .link {
+    height: 4rem;
+    /* aspect-ratio: 2; */
+    
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: white;
+    align-self: flex-start;
+    transition: 150ms;
+}
+.wrapper .link:hover {
+    border: 1px solid gold;
+}
+
+.wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: .5;
+}

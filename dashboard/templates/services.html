@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <script src="https://kit.fontawesome.com/f8b8bea0a5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/services.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <a href="/" class="back"><i class="fa-solid fa-arrow-left"></i></a>
+
+        <svg viewBox="0 0 233 166" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.5 29.5L65 95.5L34.5 67L0 0L104 18L109 105L117 125L123 105L129 18L232.5 0L202.5 66L168 95.5L187.5 29.5L162 35.5L150.5 105L116 165.5L84 105L72 35.5L46.5 29.5Z" fill="#032737"/>
+        </svg>
+
+        {% for s in services %}
+        <div class="service">
+            <h2>{{s.name}}</h2>
+            <p>{{s.description}}</p>
+            <span>${{s.cost}}</span>
+            <a href="/contact/">Buyurtma</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

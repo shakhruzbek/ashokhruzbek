@@ -1,0 +1,54 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    overflow: auto;
+}
+.wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: .5;
+}
+
+.wrapper .staff {
+    height: 18rem;
+    display: flex;
+    gap: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 5px rgba(0 0 0 /.5);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.wrapper .staff img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.wrapper .staff .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2em;
+}
+.wrapper .staff .meta p {
+    font-size: .6em;
+    opacity: .7;
+}
+.wrapper .staff .meta h2::after {
+    content: attr(data-position);
+    font-size: .3em;
+    font-weight: 100;
+    margin-left: 1rem;
+    opacity: .7;
+}
+

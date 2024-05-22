@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/f8b8bea0a5.js" crossorigin="anonymous"></script>
+    <script src="{% static 'scripts/particles.js' %}" defer></script>
+    <script src="{% static 'scripts/home.js' %}" defer></script>
+
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+</head>
+<body>
+    <!-- <header></header> -->
+    <main>
+        <div class="content">
+            <h1>{{name}}</h1>
+            <p>{{desc}}</p>
+        </div>
+
+        <div id="particles"></div>
+        <svg viewBox="0 0 233 166" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.5 29.5L65 95.5L34.5 67L0 0L104 18L109 105L117 125L123 105L129 18L232.5 0L202.5 66L168 95.5L187.5 29.5L162 35.5L150.5 105L116 165.5L84 105L72 35.5L46.5 29.5Z" fill="#032737"/>
+        </svg>
+    </main>
+    
+    <section class="empty"></section>
+
+    <div class="hot-edge"></div>
+    <section class="wrapper">
+        <i class="fa-solid fa-angles-down next"></i>
+        <h1>TEZKOR LINKLAR</h1>
+        <div class="links">
+            <div data-href="about/" class="link nonfullscreen-link"><i class="fa-solid fa-question"></i> Biz haqimizda</div>
+            <div data-href="services/" class="link nonfullscreen-link"><i class="fa-solid fa-handshake"></i> Servislarimiz</div>
+            <div data-href="staff/" class="link nonfullscreen-link"><i class="fa-solid fa-user-tie"></i> Xodimlarimiz</div>
+            <div data-href="contact/" class="link nonfullscreen-link"><i class="fa-solid fa-comments"></i> Aloqa</div>
+        </div>
+    </section>
+</body>
+</html>
